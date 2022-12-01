@@ -1,5 +1,5 @@
 import { ChakraProvider, Button, Box } from '@chakra-ui/react';
-import './App.css';
+import './App.scss';
 import Header from '../Header/Header'
 import AboutMe from '../AboutMe/AboutMe'
 

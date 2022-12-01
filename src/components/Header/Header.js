@@ -1,4 +1,4 @@
-import './Header.css';
+import './Header.scss';
 import { useColorMode, Button } from '@chakra-ui/react';
 
 
