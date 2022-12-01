@@ -1,8 +1,15 @@
-.introduction {
-  // margin: 1em;
+.about-me, .introduction-light, .introduction-dark {
+  box-sizing: border-box;
+  // margin: 0;
+  // width: 100vw;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  // padding: 2rem;
 }
 
 @font-face {
@@ -18,29 +25,28 @@
   font-style: normal;
 }
 
-
 $clr1: rgb(255, 0, 60);
 $clr2: rgb(38, 149, 255);
 
-.first-name {
+.first-name-dark {
   font-family: neon;
   color: #fb4264;
   text-shadow: 0 0 3vw #f40a35;
 }
 
-.last-name {
+.last-name-dark {
   font-family: neon;
   color: #426dfb;
   text-shadow: 0 0 3vw #2356ff;
 }
 
-.first-name {
-  animation: first-name 3s ease infinite;
-  -moz-animation: first-name 3s ease infinite;
-  -webkit-animation: first-name 3s ease infinite;
+.first-name-dark {
+  animation: first-name-dark 3s ease infinite;
+  -moz-animation: first-name-dark 3s ease infinite;
+  -webkit-animation: first-name-dark 3s ease infinite;
 }
 
-@keyframes first-name {
+@keyframes first-name-dark {
   0%,
   100% {
     text-shadow: 0 0 1vw #fa1c16, 0 0 3vw #fa1c16, 0 0 10vw #fa1c16, 0 0 10vw #fa1c16, 0 0 0.4vw #fed128,
@@ -54,14 +60,14 @@ $clr2: rgb(38, 149, 255);
   }
 }
 
-.last-name {
-  animation: last-name 2s linear infinite;
-  -moz-animation: last-name 2s linear infinite;
-  -webkit-animation: last-name 2s linear infinite;
-  -o-animation: last-name 2s linear infinite;
+.last-name-dark {
+  animation: last-name-dark 2s linear infinite;
+  -moz-animation: last-name-dark 2s linear infinite;
+  -webkit-animation: last-name-dark 2s linear infinite;
+  -o-animation: last-name-dark 2s linear infinite;
 }
 
-@keyframes last-name {
+@keyframes last-name-dark {
   0%,
   100% {
     text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff, 0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe,
@@ -75,17 +81,57 @@ $clr2: rgb(38, 149, 255);
   }
 }
 
-.pronounciation {
+.pronounciation-dark {
   transform: rotate(1deg);
   color: scale-color($clr2, $lightness: 80%);
   text-shadow: 0 0 0 transparent, 0 5px 10px rgba(scale-color($clr2, $lightness: -80%), 1), 0 0 10px $clr2,
     0 0 20px rgba($clr2, 0.5), 0 0 40px rgba($clr2, 1), 0 0 100px rgba($clr2, 1), 0 0 200px rgba($clr2, 1),
     0 0 300px rgba($clr2, 1), 0 0 500px rgba($clr2, 1);
-  // animation: buzz 0.0001s infinite alternate;
 }
 
-// @keyframes buzz {
-//   70% {
-//     opacity: 0.8;
-//   }
-// }
+@import url("https://fonts.googleapis.com/css2?family=Warnes&display=swap");
+
+
+.name-light {
+  font-family: "Warnes", cursive;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+}
+
+.pronounciation-light {
+  font-family: "Warnes", cursive;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.name-light, .pronounciation-light {
+  animation: name-light 2s ease-in-out infinite alternate;
+}
+
+@keyframes name-light {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073,
+      0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6,
+      0 0 80px #ff4da6;
+  }
+}
+
+@keyframes pronounciation-light {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073,
+      0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6,
+      0 0 80px #ff4da6;
+  }
+}
+
+//NEED TO FIX FLICKERING ON LIGHT MODE PAGE
+//IN KEYFRAMES OR?????
+//WHY IS THERE A GLITCH, AND HOW DID WE FIX THE DARK MODE VERSION SO SMOOTHLY???
